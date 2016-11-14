@@ -1,19 +1,16 @@
 package models;
 
 import java.util.*;
-
 import javax.persistence.*;
 
 import com.avaje.ebean.Model;
-import com.avaje.ebean.PagedList;
-
 import play.data.format.*;
 import play.data.validation.*;
 
 import com.avaje.ebean.*;
-import com.avaje.ebean.Model.Find;
 
-public class MemoriaRam extends Model{
+@Entity 
+public class Memoria extends Model{
 
 	 private static final long serialVersionUID = 1L;
 
@@ -36,7 +33,7 @@ public class MemoriaRam extends Model{
 	    /**
 	     * Generic query helper for entity Computer with id Long
 	     */
-	    public static Find<Long,MemoriaRam> find = new Find<Long,MemoriaRam>(){};
+	    public static Find<Long,Memoria> find = new Find<Long,Memoria>(){};
 	    
 	    /**
 	     * Return a paged list of computer
@@ -47,7 +44,7 @@ public class MemoriaRam extends Model{
 	     * @param order Sort order (either or asc or desc)
 	     * @param filter Filter applied on the name column
 	     */
-	    public static PagedList<MemoriaRam> page(int page, int pageSize, String sortBy, String order, String filter) {
+	    public static PagedList<Memoria> page(int page, int pageSize, String sortBy, String order, String filter) {
 	        return
 	            find.where()
 	                .ilike("codigo1", "%" + filter + "%")
