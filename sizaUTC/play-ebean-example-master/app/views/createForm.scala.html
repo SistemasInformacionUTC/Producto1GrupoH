@@ -14,7 +14,11 @@
             @b3.text(computerForm("name"), '_label -> "Computer name", '_help -> "")
             @b3.date(computerForm("introduced"), '_label -> "Introduced date", '_help -> "")
             @b3.date(computerForm("discontinued"), '_label -> "Discontinued date", '_help -> "")
-
+			
+			@b3.date(computerForm("marca"), '_label -> "Introduce la marca", '_help -> "")
+			@b3.text(computerForm("cantidad"), '_label -> "Cantidad", '_help -> "")
+            @b3.date(computerForm("precio"), '_label -> "Introduce precio", '_help -> "")
+            
             @b3.select(
                 computerForm("company.id"), 
                 options(Company.options), 
